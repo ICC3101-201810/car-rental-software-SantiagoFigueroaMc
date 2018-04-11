@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Car_Rental
 {
-    class Vehiculo
+    abstract class Vehiculo : IArrendable
     {
+
+
         public string licencia;//Licencia requerida para manejar este vehiculo
         public int precio;//Precio del arriendo por dias
         public string patente;//Su forma varia segun tipo de vehiculo

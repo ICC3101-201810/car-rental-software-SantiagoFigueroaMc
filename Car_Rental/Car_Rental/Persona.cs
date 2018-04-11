@@ -16,5 +16,7 @@ namespace Car_Rental
             nombre = miNombre;
             tipoLicencia = miLicencia;
         }
+
+        string mostrarLicencia()
     }
 }

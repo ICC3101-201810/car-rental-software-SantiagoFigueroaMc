@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Car_Rental
 {
-    class Auto : Vehiculo
+    abstract class Auto : Vehiculo
     {
         public int puertas;
         public string traccion; //2x4 o 4x4

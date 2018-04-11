@@ -9,7 +9,7 @@ namespace Car_Rental
     class Empresa
     {
         public string nombre;
-        public string tipo;//Deportes acuaticos, transportes, minera, motocross...
+        public string tipo;//Empresa, organicacion o institucion
         public string permiso;//Permiso para manejar el vehiculo respectivo.
 
         public Empresa(string miNombre, string miTipo, string miPermiso)
