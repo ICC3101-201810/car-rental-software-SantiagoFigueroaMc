@@ -8,12 +8,24 @@ namespace Car_Rental
 {
     class Bus : Vehiculo
     {
+        //Atributos:
         public int capacidadPasajeros, rendimiento;//Rendimiento es en km por ltr.
 
-        public Bus (int miCapacidad, int miRendimiento, int miprecio, string milicencia, string mipatente) : base(milicencia, miprecio, mipatente)
+        //Constructor:
+        public Bus (string miMarca, string miModelo, int miCapacidad, int miRendimiento, int miprecio, string milicencia, string mipatente) : base(milicencia, miprecio, mipatente, miMarca, miModelo)
         {
             capacidadPasajeros = miCapacidad;
             rendimiento = miRendimiento;
+        }
+
+        //Metodos:
+        public override void InfoVehiculo()
+        {
+            Console.WriteLine("Bus: " + marca + " " + modelo);
+        }
+        public override string GetTipo()
+        {
+            return "Bus";
         }
     }
 }

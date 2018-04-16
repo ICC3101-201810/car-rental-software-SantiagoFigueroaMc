@@ -6,17 +6,23 @@ using System.Threading.Tasks;
 
 namespace Car_Rental
 {
-    class Persona
+    class Persona : Arrendatario
     {
-        public string nombre; //Nombre completo de la persona
         public string tipoLicencia; //Para autos, motos, maquinaria pesada, buses, etc
 
-        public Persona(string miNombre, string miLicencia)
+        public Persona(string miNombre, string miId, string miPassword, string miLicencia) : base (miNombre, miId, miPassword)
         {
-            nombre = miNombre;
             tipoLicencia = miLicencia;
         }
 
-        string mostrarLicencia()
+        public override string GetTipo()
+        {
+            return "Persona";
+        }
+
+        public override string GetLicencia()
+        {
+            return tipoLicencia;
+        }
     }
 }

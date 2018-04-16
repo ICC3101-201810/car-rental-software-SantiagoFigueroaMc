@@ -8,9 +8,11 @@ namespace Car_Rental
 {
     class Municipalidad
     {
+        //Atributos:
 
+        //Constructor:
 
-
+        //Metodos:
 
     }
 }

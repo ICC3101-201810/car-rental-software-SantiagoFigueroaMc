@@ -8,16 +8,27 @@ namespace Car_Rental
 {
     class Moto : Vehiculo
     {
+        //Atributos:
         public int hp, rendimiento;//Rendimiento es en km por ltr.
-        public bool incluyeCasco;// true or false
-        public bool tieneMaletas;// true or false
+        public bool incluyeCasco, tieneMaletas;// true or false
 
-        public Moto(int miHp, int miRendimiento, bool miCasco, bool miMaleta, int miprecio, string milicencia, string mipatente) : base(milicencia, miprecio, mipatente)
+        //Constructor:
+        public Moto(string miMarca, string miModelo, int miHp, int miRendimiento, bool miCasco, bool miMaleta, int miPrecio, string miLicencia, string miPatente) : base(miLicencia, miPrecio, miPatente, miMarca, miModelo)
         {
             hp = miHp;
             rendimiento = miRendimiento;
             incluyeCasco = miCasco;
             tieneMaletas = miMaleta;
+        }
+
+        //Metodos:
+        public override void InfoVehiculo()
+        {
+            Console.WriteLine("Moto: " + marca + " " + modelo);
+        }
+        public override string GetTipo()
+        {
+            return "Moto";
         }
     }
 }

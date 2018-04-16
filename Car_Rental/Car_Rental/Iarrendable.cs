@@ -8,6 +8,6 @@ namespace Car_Rental
 {
     interface IArrendable
     {
-        void infoVehiculo();
+        void InfoVehiculo();
     }
 }

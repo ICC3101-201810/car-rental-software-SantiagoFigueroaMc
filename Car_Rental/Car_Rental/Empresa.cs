@@ -6,17 +6,30 @@ using System.Threading.Tasks;
 
 namespace Car_Rental
 {
-    class Empresa
+    class Empresa : Arrendatario
     {
-        public string nombre;
+        //Atributos:
         public string tipo;//Empresa, organicacion o institucion
         public string permiso;//Permiso para manejar el vehiculo respectivo.
+        string licencia;
 
-        public Empresa(string miNombre, string miTipo, string miPermiso)
+        //Constructor:
+        public Empresa(string miNombre, string miId, string miPassword, string miTipo, string miPermiso, string miLicencia) : base (miNombre, miId, miPassword)
         {
-            nombre = miNombre;
             tipo = miTipo;
             permiso = miPermiso;
+            licencia = miLicencia;
+        }
+
+        //Metodos:
+        public override string GetLicencia()
+        {
+            return licencia;
+        }
+
+        public override string GetTipo()
+        {
+            return "Empresa";
         }
     }
 }

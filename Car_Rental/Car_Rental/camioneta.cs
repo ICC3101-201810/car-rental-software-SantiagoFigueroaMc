@@ -6,19 +6,35 @@ using System.Threading.Tasks;
 
 namespace Car_Rental
 {
-    class Camioneta
+    class Camioneta : Vehiculo
     {
-        public string marca;//fiat, bmw, audi, mini
-        public string model;
-        public string cabina;//doble o simple
-        public int maxLoad;
+        //Atributos:
+        public int capacidad; //carga maxima en pick-up
+        public string tipoCabina;//doble o simple
+        public int puertas;
+        public string traccion;
+        public int rendimiento;
 
-        public Camioneta(string miMarca, string miModel, string miCabina, int miMaxLoad,int mipuertas, string mitraccion, int mirendimiento, int miprecio, string milicencia, string mipatente) : base(mipuertas, mitraccion, mirendimiento, milicencia, miprecio, mipatente)
+        //Constructor:
+        public Camioneta(string miMarca, string miModelo, string miTipoCabina, int miCapacidad,int miPuertas, string miTraccion, int miRendimiento, int miPrecio, string miLicencia, string miPatente) : 
+            base(miLicencia, miPrecio, miPatente, miMarca, miModelo)
         {
-            marca = miMarca;
-            model = miModel;
-            cabina = miCabina;
-            maxLoad = miMaxLoad;
+            capacidad = miCapacidad;
+            tipoCabina = miTipoCabina;
+            puertas = miPuertas;
+            traccion = miTraccion;
+            rendimiento = miRendimiento;
+
+        }
+
+        //Metodos:
+        public override void InfoVehiculo()
+        {
+            Console.WriteLine("Camioneta: " + marca + " " + modelo);
+        }
+        public override string GetTipo()
+        {
+            return "Camioneta";
         }
     }
 }
